@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩经网 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+            background-color: #fafaf9;
+            color: #1c1b1a;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* hero 短句 */
+        .hero {
+            margin-bottom: 3rem;
+        }
+
+        .hero-text {
+            font-size: 2.2rem;
+            font-weight: 340;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            color: #1f1e1c;
+            border-left: 3px solid #b5a99a;
+            padding-left: 1.2rem;
+        }
+
+        .hero-text span {
+            font-weight: 420;
+            color: #3d352e;
+        }
+
+        /* 承接段落 */
+        .intro {
+            margin-bottom: 2.8rem;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            color: #2d2925;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro a {
+            color: #2b5f4a;
+            text-decoration: none;
+            border-bottom: 1px solid #c7d6ce;
+            padding-bottom: 1px;
+            transition: border-color 0.25s, color 0.25s;
+        }
+
+        .intro a:hover {
+            border-bottom-color: #2b5f4a;
+            color: #1a4235;
+        }
+
+        /* 特点列表 —— 温和卡片 */
+        .features {
+            margin: 2.8rem 0 2.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #e7e3de;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            transition: box-shadow 0.25s, border-color 0.2s;
+        }
+
+        .feature-item:hover {
+            border-color: #cbc2b5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .feature-title {
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.01em;
+            color: #2f2a24;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-desc {
+            font-size: 0.92rem;
+            color: #5a544c;
+        }
+
+        /* 温和提醒 / 访问建议 */
+        .note-box {
+            background: #f3f1ee;
+            border-radius: 20px;
+            padding: 1.5rem 1.8rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+
+        .note-box h3 {
+            font-weight: 430;
+            font-size: 1.1rem;
+            color: #2d2822;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.01em;
+        }
+
+        .note-box p {
+            font-size: 0.94rem;
+            color: #43403a;
+            margin-bottom: 0.6rem;
+        }
+
+        .note-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .note-box a {
+            color: #2b5f4a;
+            text-decoration: none;
+            border-bottom: 1px solid #c7d6ce;
+        }
+
+        .note-box a:hover {
+            border-bottom-color: #2b5f4a;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.4rem 0 2rem;
+        }
+
+        .faq-summary h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 0.01em;
+            color: #2c2824;
+            border-bottom: 1px solid #e0d9d1;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 0.9rem;
+        }
+
+        .faq-q {
+            font-weight: 460;
+            font-size: 0.98rem;
+            color: #2f2a24;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #5b554d;
+            padding-left: 0.25rem;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e3ddd6;
+            font-size: 0.9rem;
+            color: #5c5650;
+        }
+
+        .closing a {
+            color: #2b5f4a;
+            text-decoration: none;
+            border-bottom: 1px solid #c7d6ce;
+        }
+
+        .closing a:hover {
+            border-bottom-color: #2b5f4a;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.8rem 1rem;
+            }
+            .hero-text {
+                font-size: 1.7rem;
+                padding-left: 1rem;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .note-box {
+                padding: 1.2rem 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 开场短句 -->
+    <div class="hero">
+        <div class="hero-text">
+            有些站点值得慢下来<br>
+            <span>先看懂，再往前走。</span>
+        </div>
+    </div>
+
+    <!-- 承接段落：简明指南 + 访问提醒 -->
+    <div class="intro">
+        <p>
+            信息过载的年代，一个干净、直接的入口反而变得珍贵。<strong>彩经网</strong> 不是那种让你一进来就眼花缭乱的平台——它更接近一份安静的索引，把内容按条理放好，等待真正有需要的人。
+        </p>
+        <p>
+            这里没有闪烁的弹窗或急迫的催促。无论你是偶尔路过，还是带着明确目的来查找，都不妨先花一分钟感受页面的结构。很多细节藏在简洁的导航和分类之下，翻看时会有种“原来如此”的顺当感。
+        </p>
+        <p>
+            如果你正在寻找一个可靠的起点，可以记住这个地址：<a href="https://index-caijingweb.com">彩经网</a>。它本身不制造喧嚣，只是安静地提供一条清晰的路。
+        </p>
+    </div>
+
+    <!-- 特点列表 -->
+    <div class="features">
+        <div class="feature-item">
+            <div class="feature-title">克制的布局</div>
+            <div class="feature-desc">页面元素经过筛选，不堆砌信息，每个模块都有存在的理由。</div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-title">分类即指南</div>
+            <div class="feature-desc">内容按实际场景划分，减少反复跳转，让查找变成一种顺滑的浏览。</div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-title">不打扰的体验</div>
+            <div class="feature-desc">没有强制关注或自动播放，你掌握自己的节奏。</div>
+        </div>
+    </div>
+
+    <!-- 温和提醒 / 访问建议 -->
+    <div class="note-box">
+        <h3>访问前的一点提醒</h3>
+        <p>网站本身保持稳定，但网络环境各有不同。如果加载稍慢，不妨稍等片刻——很多页面值得完整呈现。</p>
+        <p>另外，请留意浏览器地址栏，确认你进入的确实是 <a href="https://index-caijingweb.com">彩经网</a>。网络世界里，养成核对域名的习惯总是好的。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>一些常被问起的事</h2>
+        <div class="faq-item">
+            <div class="faq-q">是否需要注册才能浏览？</div>
+            <div class="faq-a">大部分内容无需登录即可阅读，部分互动功能可能需简单注册，具体可在页面底部查看说明。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">移动端体验如何？</div>
+            <div class="faq-a">适配做得比较自然，字体和间距在手机上同样舒适，横竖屏切换也不会有突兀的变形。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">信息更新频率怎样？</div>
+            <div class="faq-a">内容保持日常更新，但不会高频推送。你可以根据自己的节奏回来看看。</div>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+        <p>网上有很多地方让人匆忙，但愿这里能让你觉得从容一点。下次需要的时候，直接打开 <a href="https://index-caijingweb.com">彩经网</a> 就好。</p>
+        <p style="margin-top: 0.4rem;">慢慢看，该在的都在。</p>
+    </div>
+</div>
+</body>
+</html>
